@@ -13,14 +13,14 @@ on:
         required: true
 
 jobs:
-  run_tests:
-    uses: ./.github/workflows/test-server-and-client.yml
+#   run_tests:
+#     uses: ./.github/workflows/test-server-and-client.yml
 
-  coverage:
-    uses: ./.github/workflows/coverage-report.yml
+#   coverage:
+#     uses: ./.github/workflows/coverage-report.yml
 
   docker:
-    needs: [run_tests, coverage]
+#     needs: [run_tests, coverage]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
