@@ -62,4 +62,4 @@ jobs:
         with:
           file: DockerfileQrmServer
           push: true
-          tags: finalil/qrm_server:${{ env.version }}
+          tags: finalil/qrm_server:${{ env.version }},finalil/qrm_server:latest
