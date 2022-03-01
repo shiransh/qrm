@@ -53,14 +53,12 @@ jobs:
 
       - name: "Set version from Commit"
         id: get_version
-#         env:
-#           VERSION: vmn show
         run: |
-          echo ::set-env name=VERSION::$(vmn show qrm_server --ignore-dirty)
+          echo "version=$(vmn show qrm_server --ignore-dirty)" >> $GITHUB_ENV
 #          vmn show qrm_server --ignore-dirty
 
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: finalil/qrm_server:${{ env.VERSION }}
+          tags: finalil/qrm_server:${{ env.version }}
