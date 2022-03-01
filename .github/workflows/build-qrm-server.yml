@@ -53,8 +53,8 @@ jobs:
 
       - name: "Set version from Commit"
         id: get_version
-        env:
-          VERSION: vmn show
+#         env:
+#           VERSION: vmn show
         run: |
           echo ::set-env name=VERSION::$(vmn show qrm_server --ignore-dirty)
 #          vmn show qrm_server --ignore-dirty
