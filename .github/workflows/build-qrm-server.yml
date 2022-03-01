@@ -60,5 +60,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
+          file: DockerfileQrmServer
           push: true
           tags: finalil/qrm_server:${{ env.version }}
